@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Indian Time</title>
+</head>
+
+<body>
+    <h1>Indian Time:</h1>
+    <p id="indianTime"></p>
+
+    <script>
+        function displayIndianTime() {
+            const indianTime = new Date().toLocaleString('en-US', {
+                timeZone: 'Asia/Kolkata',
+                hour12: true,
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric'
+            });
+            document.getElementById('indianTime').innerText = indianTime;
+        }
+        displayIndianTime();
+        setInterval(displayIndianTime, 1000);
+    </script>
+</body>
+
+</html>
